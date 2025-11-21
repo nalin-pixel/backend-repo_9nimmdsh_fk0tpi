@@ -1,19 +1,25 @@
 INFO:     Will watch for changes in these directories: ['/home/workspace']
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Started reloader process [201] using StatReload
-INFO:     Started server process [203]
+INFO:     Started reloader process [290] using StatReload
+INFO:     Started server process [292]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
-INFO:     172.20.0.1:38516 - "GET /categories?limit=24 HTTP/1.1" 200 OK
-INFO:     172.20.0.1:38508 - "GET /products?limit=24 HTTP/1.1" 200 OK
-INFO:     172.20.0.1:38516 - "GET /categories?limit=24 HTTP/1.1" 200 OK
-INFO:     172.20.0.1:38508 - "GET /products?limit=24 HTTP/1.1" 200 OK
-INFO:     172.20.0.1:38530 - "HEAD / HTTP/1.1" 405 Method Not Allowed
-INFO:     172.20.0.1:38516 - "GET /products?limit=24 HTTP/1.1" 200 OK
-INFO:     172.20.0.1:38508 - "GET /categories?limit=24 HTTP/1.1" 200 OK
-INFO:     172.20.0.1:38508 - "GET /categories?limit=24 HTTP/1.1" 200 OK
-INFO:     172.20.0.1:38524 - "GET /products?limit=24 HTTP/1.1" 200 OK
-INFO:     172.20.0.1:38526 - "GET /categories?limit=24 HTTP/1.1" 200 OK
-INFO:     172.20.0.1:38526 - "GET /categories?limit=24 HTTP/1.1" 200 OK
-INFO:     172.20.0.1:47068 - "GET /products?limit=24 HTTP/1.1" 200 OK
-INFO:     172.20.0.1:47070 - "GET /products?limit=24 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:57720 - "GET /products?limit=24 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:57720 - "GET /products?limit=24 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:57714 - "GET /categories?limit=24 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:57736 - "GET /plans HTTP/1.1" 200 OK
+INFO:     172.20.0.1:57720 - "GET /categories?limit=24 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:57714 - "GET /plans HTTP/1.1" 200 OK
+INFO:     172.20.0.1:57752 - "HEAD / HTTP/1.1" 405 Method Not Allowed
+INFO:     172.20.0.1:57748 - "GET /categories?limit=24 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:39022 - "GET /plans HTTP/1.1" 200 OK
+INFO:     172.20.0.1:57748 - "GET /categories?limit=24 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:39016 - "GET /products?limit=24 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:39022 - "GET /plans HTTP/1.1" 200 OK
+INFO:     172.20.0.1:39028 - "GET /products?limit=24 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:39040 - "GET /categories?limit=24 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:39040 - "GET /products?limit=24 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:47750 - "GET /plans HTTP/1.1" 200 OK
+INFO:     172.20.0.1:39040 - "GET /plans HTTP/1.1" 200 OK
+INFO:     172.20.0.1:47756 - "GET /products?limit=24 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:47754 - "GET /categories?limit=24 HTTP/1.1" 200 OK

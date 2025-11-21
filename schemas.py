@@ -1,12 +1,14 @@
 """
-Database Schemas for Price Comparison App
+Database Schemas for App
 
 Each Pydantic model represents a MongoDB collection. The collection name is the lowercase of the class name.
 """
 from typing import Optional, List, Dict
 from pydantic import BaseModel, Field
 
+# -----------------
 # Auth and Users
+# -----------------
 class User(BaseModel):
     name: str = Field(..., description="Full name")
     email: str = Field(..., description="Unique email address")
@@ -22,7 +24,40 @@ class Session(BaseModel):
     ip: Optional[str] = None
     expires_at: Optional[str] = None
 
-# Catalog
+# -----------------
+# SaaS Core
+# -----------------
+class Organization(BaseModel):
+    name: str
+    slug: Optional[str] = None
+    owner_id: str
+
+class Membership(BaseModel):
+    org_id: str
+    user_id: str
+    role: str = Field("member", description="owner | admin | member")
+
+class Project(BaseModel):
+    org_id: str
+    name: str
+    description: Optional[str] = None
+    status: str = Field("active")
+
+class Plan(BaseModel):
+    key: str = Field(..., description="unique plan key, e.g., starter, pro, scale")
+    name: str
+    price_monthly: float = Field(ge=0)
+    features: List[str] = Field(default_factory=list)
+
+class Subscription(BaseModel):
+    org_id: str
+    plan_key: str
+    status: str = Field("active", description="active | canceled | past_due")
+    provider: str = Field("internal", description="billing provider id or name")
+
+# -----------------
+# Legacy Price Comparison (optional)
+# -----------------
 class Category(BaseModel):
     slug: str = Field(..., description="url-friendly unique id")
     title: str
